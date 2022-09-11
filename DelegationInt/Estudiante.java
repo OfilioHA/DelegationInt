@@ -27,6 +27,9 @@ public class Estudiante implements Descripcion {
     }
 
     public String descripcion() {
-        return this.getUniversidad() + " - " + this.getTitulacion();
+        return 
+            this.getUniversidad() + " - " + 
+            this.getTitulacion() + " - " +
+            this.getClass().getSimpleName();
     }
 }

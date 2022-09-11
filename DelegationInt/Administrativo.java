@@ -1,11 +1,11 @@
 package DelegationInt;
 
-public class Profesor implements Descripcion {
+public class Administrativo implements Descripcion {
 
     private String departamento;
     private double sueldo;
 
-    public Profesor(String departamento, double sueldo) {
+    public Administrativo(String departamento, double sueldo) {
         this.departamento = departamento;
         this.sueldo = sueldo;
     }

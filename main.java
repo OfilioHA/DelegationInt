@@ -3,31 +3,49 @@ import java.util.*;
 
 public class main {
     public static void main(String[] args) {
-        System.out.println("Hello World");
+        System.out.println("\nPersonal Universitario\n");
 
-        Descripcion d1 = new Profesor("CC", 1600);
-        Descripcion d2 = new Estudiante("Alcala", "Informática");
-        Descripcion d3 = new Estudiante("Alcala", "Doctorado en Informática");
-
-        //Creamos 3 personas
-        PersonalUniversitario pu1 = new PersonalUniversitario(
-            "1", 
-            "Pepe", 
-            "d1",
-            new ArrayList<Descripcion>(
-                Arrays.asList(
-                    new Estudiante("Alcala", "Informática"),
-                    new Profesor("CC", 1600)
-                )
+        List<PersonalUniversitario> personal = new ArrayList<PersonalUniversitario>(
+            Arrays.asList(
+                    new PersonalUniversitario(
+                        "1", 
+                        "Ofilio Herdocia Aráuz", 
+                        "d1",
+                        new ArrayList<Descripcion>(
+                            Arrays.asList(
+                                new Estudiante("UNAN - León", "Ing. en Sistemas"),
+                                new Administrativo("CT", 300),
+                                new Proyecto("Investigacion I", 800)
+                            )
+                        )
+                    ),
+                    new PersonalUniversitario(
+                        "2", 
+                        "Angie Jazmin Caballero Munguia", 
+                        "d2",
+                        new ArrayList<Descripcion>(
+                            Arrays.asList(
+                                new Estudiante("UNAN - León", "Ing. en Sistemas"),
+                                new Proyecto("Investigacion II", 1000)
+                            )
+                        )
+                    ),
+                    new PersonalUniversitario(
+                        "3", 
+                        "Miguel Barcenas", 
+                        "d3",
+                        new ArrayList<Descripcion>(
+                            Arrays.asList(
+                                new Profesor("CT", 600),
+                                new Administrativo("CC", 600)
+                            )
+                        )
+                    )  
             )
         );
 
-        System.out.println(pu1.descripcion());
-        //PersonalUniversitario pu2 = new PersonalUniversitario("2", "Sonia", "d2");
-        //PersonalUniversitario pu3 = new PersonalUniversitario("3", "Jose", "d3");
-        //PersonalUniversitario pu4 = new PersonalUniversitario("4", "Maria", "d4");
-        //PersonalUniversitario pu5 = new PersonalUniversitario("5", "Dolores", "d5");        
-        //PersonalUniversitario pu6 = new PersonalUniversitario("6", "Escroto", "d6");
-
+        for (int i = 0; i < personal.size(); i++) {
+            System.out.println(personal.get(i).descripcion());
+        }
     }
 }
