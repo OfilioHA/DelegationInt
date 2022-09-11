@@ -3,6 +3,7 @@ import java.util.*;
 
 public class main {
     public static void main(String[] args) {
+        
         System.out.println("\nPersonal Universitario\n");
 
         List<PersonalUniversitario> personal = new ArrayList<PersonalUniversitario>(

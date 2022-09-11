@@ -18,7 +18,6 @@ public class PersonalUniversitario {
         this.dni = dni;
         this.nombre = nombre;
         this.direccion = direccion;
-        //this.roles = new ArrayList<>();
         this.roles = roles;
     }
 
